@@ -1,9 +1,12 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Paddle/Paddle.gd" type="Script" id=1]
 [ext_resource path="res://Assets/paddleRed.png" type="Texture" id=2]
 [ext_resource path="res://Assets/paddleBlu.png" type="Texture" id=3]
 [ext_resource path="res://Assets/confetti.png" type="Texture" id=4]
+[ext_resource path="res://Assets/New Piskel (2).png" type="Texture" id=5]
+[ext_resource path="res://Assets/New Piskel.png" type="Texture" id=6]
+[ext_resource path="res://Assets/pupil.png" type="Texture" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 50, 10 )
@@ -54,3 +57,29 @@ texture = ExtResource( 2 )
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 50, 10 )
 texture = ExtResource( 3 )
+
+[node name="Eye1" type="Sprite" parent="."]
+position = Vector2( 19, 0 )
+texture = ExtResource( 6 )
+
+[node name="Pupil" type="Node2D" parent="Eye1"]
+
+[node name="Sprite" type="Sprite" parent="Eye1/Pupil"]
+position = Vector2( -1, -1 )
+scale = Vector2( 0.65625, 0.65625 )
+texture = ExtResource( 7 )
+
+[node name="Eye2" type="Sprite" parent="."]
+position = Vector2( 79, 0 )
+texture = ExtResource( 6 )
+
+[node name="Pupil" type="Node2D" parent="Eye2"]
+
+[node name="Sprite" type="Sprite" parent="Eye2/Pupil"]
+position = Vector2( -1, -1 )
+scale = Vector2( 0.65625, 0.65625 )
+texture = ExtResource( 7 )
+
+[node name="Mouth" type="Sprite" parent="."]
+position = Vector2( 50, 15 )
+texture = ExtResource( 5 )
